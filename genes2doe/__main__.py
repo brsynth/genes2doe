@@ -7,6 +7,7 @@ from colored import fg, bg, attr
 from .Args import build_args_parser
 from .convert import extract_genes
 
+
 def init(
     parser: ArgumentParser,
     args: Namespace

@@ -10,24 +10,27 @@
 ## Use
 ### CLI
 ```
-python -m parts2doe tests/data/pathway.xml selenzy.xml
+python -m parts2doe tests/data/input/lycopene.xml GeneParts.csv
 ```
 ### As a Python module
 ```python
-from selenzy_wrapper import selenzy_pathway
+from parts2doe import extract_genes
 
-pathway = rpPathway.from_rpSBML(infile='tests/data/pathway.xml')
-
-selenzy_pathway(pathway=pathway)
-
-pathway.to_rpSBML().write_to_file('selenzy.xml')
+genes = extract_genes(
+    sbml_file='tests/data/input/lycopene.xml'
+)
+genes.to_csv('GeneParts.csv', index=False)
 ```
 
 ## Tests
-Please follow instructions below ti run tests:
+`pytest` is required and installable by:
 ```
-cd tests
-pytest -v
+conda install -c conda-forge pytest
+```
+
+Please follow instructions below to run tests:
+```
+python -m pytest
 ```
 For further tests and development tools, a CI toolkit is provided in https://github.com/breakthewall/cicd-toolkit.
 

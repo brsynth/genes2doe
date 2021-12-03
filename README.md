@@ -41,4 +41,4 @@ For further tests and development tools, a CI toolkit is provided in https://git
 
 
 ## Licence
-parts2doe is released under the MIT licence. See the LICENCE file for details.
+genes2doe is released under the MIT licence. See the LICENCE file for details.

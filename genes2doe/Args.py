@@ -5,6 +5,7 @@ from typing import (
 from ._version import __version__
 from brs_utils import add_logger_args
 
+DEFAULT_MAXGENES = 5
 
 def build_args_parser(
     prog: str,
@@ -30,7 +31,6 @@ def build_args_parser(
 
     return parser
 
-
 def _add_arguments(parser: ArgumentParser) -> ArgumentParser:
     # Add arguments related to the logger
     parser = add_logger_args(parser)
@@ -43,8 +43,6 @@ def _add_arguments(parser: ArgumentParser) -> ArgumentParser:
     )
 
     return parser
-
-DEFAULT_MAXGENES = 5
 
 def add_arguments(parser: ArgumentParser) -> ArgumentParser:
     parser.add_argument(

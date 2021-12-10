@@ -3,7 +3,7 @@
 ## Install
 ### From Conda
 ```sh
-[sudo] conda install -c conda-forge parts2doe
+[sudo] conda install -c conda-forge genes2doe
 
 ```
 
